@@ -67,7 +67,7 @@ RUN cd ~ \
     && make install \
     && make configs
 
-RUN cp -rp ~/janus-gateway/certs /opt/janus/share/janus
+COPY ssl/certs /opt/janus/share/janus/certs
 
 COPY conf/*.cfg /opt/janus/etc/janus/
 
